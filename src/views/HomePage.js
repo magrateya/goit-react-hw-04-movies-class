@@ -19,7 +19,7 @@ class HomePage extends Component {
   componentDidMount() {
     fetchFilms()
       .then(data => {
-        console.log(data);
+        // console.log(data);
         this.setState(() => ({
           filmsList: [...data],
         }));
@@ -28,8 +28,7 @@ class HomePage extends Component {
   }
 
   render() {
-    console.log(this.props.match.url);
-
+    // console.log(this.props.match.url);
     return (
       <ul>
         {this.state.filmsList.map(film => (
